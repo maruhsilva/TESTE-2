@@ -1,0 +1,480 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-BoldCondensed.ttf);
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: 'Bodar';
+    src: url(fonts/BODAR.ttf);
+}
+@font-face {
+    font-family: 'Kolgimba';
+    src: url(fonts/Kolgimba.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/12462.jpg);
+    width: 100vw;
+    height: 100vh;   
+    background-size: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+.menu__bar .emili {
+    font-size: 1.6rem;
+    font-family: 'Kolgimba';
+    display: none;
+    text-decoration: none;
+    color: black;
+}
+
+.navegacao, .mobile-icons {
+    display: flex;
+    padding: 10px;
+    background-color: hsl(26, 29%, 56%, 0.1);
+    justify-content: space-evenly;
+    padding: 10px 200px;
+}
+
+.navegacao a, 
+.mobile-icons a {
+    text-decoration: none;
+    align-items: center;
+    margin: 5px 0 5px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.navegacao a, 
+.mobile-icons a {
+    font-family: 'RobotoLight';
+    text-decoration: none;
+    color: rgb(131, 111, 111, 0.7);
+}
+
+.navegacao a:hover, 
+.mobile-icons a:hover {
+    color: hsl(26, 29%, 56%);
+    transition: 0.3s; 
+    margin: 0;
+}
+
+.menu__bar img {
+    width: 245px;
+    height: 55px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.menu__bar {
+    background-color: hsl(0, 0%, 100%, 0.6);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 80px;
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+.menu__bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.menu__bar ul li {
+    justify-content: space-between;
+    position: relative;
+    margin-right: 40px;
+}
+
+.menu__bar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: .02rem;
+}
+
+.menu__bar ul li a:hover {
+    color: #af8a6d;
+    transition: 0.3s; 
+    margin: 0;
+}
+
+.dropdown__menu {
+    display: none;
+    transition: 2s;
+}
+
+.menu__bar ul li:hover .dropdown__menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color:hsla(33, 40%, 68%);
+    margin: 0;
+}
+
+.menu__bar ul li:hover .dropdown__menu ul {
+    display: block;
+    margin: 0px;
+    transition: 3s;
+}
+
+.menu__bar ul li:hover .dropdown__menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+footer {
+    background-color: #af8a6d;
+    color: white;
+    text-align: center;
+    font-family: 'RobotoLight';
+    padding: 15px;
+    font-size: 13px;
+}
+
+.titulo {
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Roboto';
+    padding: 0 15px 0;
+    font-size: 50px;
+    /*border: 3px solid #af8a6d;*/
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    letter-spacing: 2px;
+}
+
+body .perguntas {
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 4%;
+}
+
+.container { 
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.perguntas h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    border: 2px solid #af8a6d;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+.ques {
+    background-color: #af8a6d;
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-family: 'Roboto';
+    border-bottom: 1px solid hsl(0, 0%, 0%, .3);
+    box-shadow: 10px 10px 10px hsl(0, 0%, 0%, .25);    
+}
+
+.ques:hover {
+    background-color: antiquewhite;
+
+}
+
+.ans {
+    max-height: 0;
+    width: 50%;
+    margin-left: 25%;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    font-family: 'RobotoLight';
+}
+
+.faq i{
+    transition: all .3s ease-in-out;
+}
+
+.faq-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.faq.active .ans {
+    max-height: 300px;
+}
+
+.faq.active i{
+    transform: rotate(45deg);
+}
+
+.ans p {
+    background-color: white;
+    padding: 20px;
+    font-size: 22px;
+    border-top: 1px solid #af8a6d;
+}
+
+body .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    padding: 5%;
+}
+
+.container1 {
+    background-color: #faead6;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px hsl(0, 0%, 0%, .25);
+}
+
+h4 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    font-family: 'RobotoLight';
+}
+
+.input-single {
+    padding: 5px 10px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-single label {
+    position: absolute;
+    left: 0;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #faead6;
+    padding: 10px;
+    outline: none;
+    
+}
+
+.form-container .input-single .input:focus ~ label,
+.form-container .input-single .input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: .75rem;
+    transition: 0.3s;
+    color: black;
+}
+
+label {
+    padding: 10px;
+    font-family: 'Roboto';
+    cursor: text;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    margin-top: -12px;
+}
+
+.btn input{
+    padding: 010px 30px;
+    border: .5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 95%;
+    font-family: 'Roboto';
+}
+
+.btn input:hover {
+    transition: .5s;
+    background-color: #af8a6d;
+    color: white;
+}
+
+.form-container aside {
+    width: 30%;
+    padding: 20px;
+    align-items: center;
+}
+
+aside h5 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    padding: 2px;
+    align-items: center;
+}
+
+aside h6 {
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 25.5%;
+}
+
+aside p {
+    font-family: 'RobotoLight';
+    line-height: 25px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+.form-container p a {
+    text-decoration: none;
+    font-family: 'RobotoLight';
+    font-size: .95rem;
+    line-height: 1rem;
+    padding: 0;
+    color: black;
+    padding: 2px;
+}
+
+@media (max-width: 1000px) {
+
+    .menu__bar .emili {
+        margin: 0;
+        padding: 0 10px;
+        display: flex;
+        font-size: 1.2rem;
+    }
+
+    .menu__bar img {
+        display: none;
+    }
+
+    .menu__bar {
+        padding-bottom: 1%;
+        padding-top: .5%;
+        margin: 0;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .menu__bar ul {
+        width: 100%;
+        
+        justify-content: space-around;
+    }
+
+    .menu__bar ul li {
+        padding: 1px;
+        
+        padding: 0;
+        margin: 0%;
+        opacity: 1;
+    }
+
+    .menu__bar ul li a {
+        font-size: 1.03rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-container {
+        flex-direction: column;
+        padding-top: 0;
+        margin-top: -50px;
+    }
+
+    .form-container aside {
+        width: 100%;
+    }
+
+    .perguntas {
+        padding-top: 10%;
+    }
+
+    .container {
+        min-width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+    
+    .ques,
+    .ans {
+        width: 100%;
+        margin: 0;
+    }
+
+    .mobile-icons {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .ans p {
+        font-size: 1rem;
+    }
+
+    nav .whats {
+        display: none;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    aside h6 {
+        width: 40%;
+    }
+
+    aside {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .titulo {
+        margin-top: -45px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}

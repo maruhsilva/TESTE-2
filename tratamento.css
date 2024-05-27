@@ -1,0 +1,369 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-BoldCondensed.ttf);
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: 'Bodar';
+    src: url(fonts/BODAR.ttf);
+}
+@font-face {
+    font-family: 'Kolgimba';
+    src: url(fonts/Kolgimba.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/12462.jpg);
+    width: 100vw;
+    height: 100vh;   
+    background-size: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+.menu__bar .emili {
+    font-size: 1.6rem;
+    font-family: 'Kolgimba';
+    display: none;
+    text-decoration: none;
+    color: black;
+}
+
+.navegacao, .mobile-icons {
+    display: flex;
+    padding: 10px;
+    background-color: hsl(26, 29%, 56%, 0.1);
+    justify-content: space-evenly;
+    padding: 10px 200px;
+}
+
+.navegacao a, 
+.mobile-icons a {
+    text-decoration: none;
+    align-items: center;
+    margin: 5px 0 5px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.navegacao a, 
+.mobile-icons a {
+    font-family: 'RobotoLight';
+    text-decoration: none;
+    color: rgb(131, 111, 111, 0.7);
+}
+
+.navegacao a:hover, 
+.mobile-icons a:hover {
+    color: hsl(26, 29%, 56%);
+    transition: 0.3s; 
+    margin: 0;
+}
+
+.menu__bar img {
+    width: 245px;
+    height: 55px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.menu__bar {
+    background-color: hsl(0, 0%, 100%, 0.6);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 80px;
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+.menu__bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.menu__bar ul li {
+    justify-content: space-between;
+    position: relative;
+    margin-right: 40px;
+}
+
+.menu__bar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: .02rem;
+}
+
+.menu__bar ul li a:hover {
+    color: #af8a6d;
+    transition: 0.3s; 
+    margin: 0;
+}
+
+.dropdown__menu {
+    display: none;
+    transition: 2s;
+}
+
+.menu__bar ul li:hover .dropdown__menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color:hsla(33, 40%, 68%);
+    margin: 0;
+}
+
+.menu__bar ul li:hover .dropdown__menu ul {
+    display: block;
+    margin: 0px;
+    transition: 3s;
+}
+
+.menu__bar ul li:hover .dropdown__menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+footer {
+    background-color: #af8a6d;
+    color: white;
+    text-align: center;
+    font-family: 'RobotoLight';
+    padding: 15px;
+    font-size: 13px;
+}
+
+main{
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Roboto';
+    padding: 0 15px 0;
+    font-size: 50px;
+    /*border: 3px solid #af8a6d;*/
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    letter-spacing: 2px;
+}
+
+.tratamento .container1 {
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+}
+
+.container1 ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    background-color: hsl(34, 78%, 91%, 0.45);
+    box-shadow: 5px 0px 10px hsl(0, 0%, 50%, 0.5);
+    height: 500px;
+    border-left: 2px solid #af8a6d;
+    margin: 30px 35px 7%; 
+}
+
+.container ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    background-color: hsl(34, 78%, 91%, 0.45);
+    box-shadow: 5px 0px 10px hsl(0, 0%, 50%, 0.5);
+    height: 500px;
+    border-left: 2px solid #af8a6d;
+    margin: 30px 35px 0;
+    
+}
+
+.container li img, .container1 li img {
+    width: 240px;
+    height: 300px;
+    margin: 2px 10px 20px;
+    background-color: transparent;
+    box-shadow: 15px 25px 5px #94745c;
+    border-bottom-right-radius: 90px;
+    border-top-left-radius: 0px;
+    margin-top: 10px;
+}
+
+.container ul p, .container1 ul p {
+    max-width: 285px;
+    padding: 5px 10px 20px;
+    font-family: 'RobotoLight';
+}
+
+.container h3, .container1 h3 {
+   padding: 5px 10px 5px;
+   margin-top: 10px;
+   font-family: 'Roboto';
+}
+
+.container a, .container1 a{
+    background-color: #af8a6d;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'RobotoLight';
+}
+
+.container a:hover, .container1 a:hover {
+    background-color: antiquewhite;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.descricao {
+    background-color: white;
+    padding: 5% 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.dados {
+    width: 55%;
+    border-bottom: 4px solid #af8a6d;
+}
+
+.descricao h3 {
+    font-family: 'Roboto';
+    background-color: #af8a6d;
+    padding: 3px;
+    max-width: 35%;
+    text-align: center;
+}
+
+.descricao h2 {
+    font-family: 'Roboto';
+    font-size: 2.5rem;
+    padding: 13px 0px 0;
+}
+
+.descricao p {
+    font-size: 1rem;
+    font-family: 'RobotoLight';
+    line-height: 2rem;
+    padding: 13px 0 0;
+}
+
+@media (max-width: 1000px) {
+
+    .menu__bar .emili {
+        margin: 0;
+        padding: 0 10px;
+        display: flex;
+        font-size: 1.2rem;
+    }
+
+    .menu__bar img {
+        display: none;
+    }
+
+    .menu__bar {
+        padding-bottom: 1%;
+        padding-top: .5%;
+        margin: 0;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .menu__bar ul {
+        width: 100%;
+        
+        justify-content: space-around;
+    }
+
+    .menu__bar ul li {
+        padding: 1px;
+        
+        padding: 0;
+        margin: 0%;
+        opacity: 1;
+    }
+
+    .menu__bar ul li a {
+        font-size: 1.03rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-icons {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .titulo {
+        margin-top: -40px;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    nav .whats {
+        display: none;
+    }
+
+    .descricao {
+        width: 100%;
+        padding: 8%;
+        padding-top: 0
+    }
+
+    .descricao .dados {
+        min-width: 100%;
+    }
+
+    .descricao .dados h3 {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
