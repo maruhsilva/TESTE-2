@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: #433100;
+    background-color: antiquewhite;
     width: 100vw;
     height: 100vh;   
     background-size: 100%;
@@ -330,7 +330,7 @@ article img {
     }
 
     .menu__bar ul li a {
-        font-size: 1.03rem;
+        font-size: .9rem;
         margin: 0;
         padding: 0;
     }

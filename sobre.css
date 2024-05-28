@@ -23,7 +23,7 @@
 }
 
 body {
-    background-image: url(smooth-green-background.jpg);
+    background-color: #165039;
     width: 100vw;
     height: 100vh;   
     background-size: 100%;
@@ -279,7 +279,7 @@ article p {
     }
 
     .menu__bar ul li a {
-        font-size: 1.03rem;
+        font-size: .9rem;
         margin: 0;
         padding: 0;
     }
@@ -315,7 +315,7 @@ article p {
 
     aside {
         padding-bottom: 15%;
-        
+        padding-top: 5%;
     }
 
     h3 {

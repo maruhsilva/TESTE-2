@@ -302,6 +302,7 @@ article img {
         margin: 0;
         padding: 0 10px;
         display: flex;
+        color: black;
         font-size: 1.2rem;
     }
 

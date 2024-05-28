@@ -324,7 +324,7 @@ h1 {
     }
 
     .menu__bar ul li a {
-        font-size: 1.03rem;
+        font-size: .9rem;
         margin: 0;
         padding: 0;
     }
@@ -337,7 +337,10 @@ h1 {
     }
 
     .titulo {
-        margin-top: -40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 90px;
     }
 
     .navegacao {
